@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-user-item',
@@ -8,9 +8,9 @@ import { Component } from '@angular/core';
   styleUrl: './user-item.component.css'
 })
 export class UserItemComponent {
-  name: string; // <-- aggiunta la proprietà name
+  @Input()name: string; // <-- aggiunta la proprietà name
   constructor() { 
-    this.name = 'Felipe'; // setta il nome nel costruttore
+     // setta il nome nel costruttore
   }
   ngOnInit() {
   }
