@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-macchina',
@@ -8,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrl: './macchina.component.css'
 })
 export class MacchinaComponent {
-
+ @Input() mac:string;
+ pezzi:string[];
+ constructor(){
+   this.pezzi=["bulloni", "viti", "ferro"];
+  }
 }
