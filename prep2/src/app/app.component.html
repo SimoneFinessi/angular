@@ -1,0 +1,22 @@
+<form>
+  <div>
+    <input name="colore" #colore> 
+    <p for="colore"> colore</p>
+  </div>
+  <div>
+    <input name="porte" #numero> 
+    <p for="porte"> numero porte</p>
+  </div>
+  <div>
+    <input name="cambio" #cambio> 
+    <p for="cambio"> tipo di cambio</p>
+  </div>
+  <button (click)="macchina(colore,numero,cambio)"> invio</button>
+</form>
+
+<!--<ul>
+  <li *ngFor="let frase of array">
+    {{frase}}
+  </li>
+</ul>-->
+<app-car-list [valore]="array" [end]="end"></app-car-list>
