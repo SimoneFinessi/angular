@@ -1,0 +1,8 @@
+<form >
+<input name="num1" #num1>inserisci valore
+<input name="num2" #num2>inserisci valore 2
+<button (click)="calcola(num1,num2,1)">+</button>
+<button (click)="calcola(num1,num2,2)">-</button>
+<button (click)="calcola(num1,num2,3)">*</button>
+</form>
+<app-visual [vedere]="ris"></app-visual>
