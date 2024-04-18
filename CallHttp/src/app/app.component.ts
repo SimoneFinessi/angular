@@ -8,15 +8,17 @@ import { Observable } from 'rxjs';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'CallHttp';
-  citofono! :Observable<any>;
-  myData_Save:any={};
-  constructor(private http:HttpClient){
-    
-    this.citofono=this.http.get("https://jsonplaceholder.typicode.com/posts/42");
-    this.citofono.subscribe(this.faiQualcosa)
+  data: Object;
+  loading: boolean;
+  o :Observable<Object>;
+  constructor(public http:HttpClient){}
+  makeRequest(): void{
+    this.loading=true;
+    this.o=this.http.get("https://jsonplaceholder.typicode.com/posts/42");
+    this.o.subscribe(this.getData);
   }
-  faiQualcosa=(myData:any)=>{
-    this.myData_Save=myData;
+  getData=(d:object)=>{
+    this.data=d;
+    this.loading=false;
   }
 }
