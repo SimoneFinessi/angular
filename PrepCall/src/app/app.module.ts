@@ -2,12 +2,12 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {HttpClientModule} from '@angular/common/http';
 import { AppComponent } from './app.component';
-import { ListaComponent } from './lista/lista.component';
+import { SecretComponent } from './secret/secret.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ListaComponent
+    SecretComponent
   ],
   imports: [
     BrowserModule,

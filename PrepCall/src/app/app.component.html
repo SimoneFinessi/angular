@@ -1,1 +1,32 @@
-<app-lista></app-lista>
+<form>
+    <label for="nome" >Nome:</label><br>
+    <input type="text" #Nome name="nome"><br>
+  
+    <label for="cognome">Cognome:</label><br>
+    <input type="text" #Cognome name="cognome"><br>
+  
+    <label for="indirizzo">Indirizzo:</label><br>
+    <input type="text" #Indirizzo name="indirizzo"><br>
+  
+    <label for="telefono">Telefono:</label><br>
+    <input type="text" #Telefono name="telefono"><br>
+  
+    <label for="email">Email:</label><br>
+    <input type="text" #Email name="email"><br>
+  
+    <label for="dataPrenotazione">Data Prenotazione:</label><br>
+    <input type="text" #DataPrenotazione name="dataPrenotazione"><br>
+  
+    <label for="oraPrenotazione">Ora Prenotazione:</label><br>
+    <input type="text" #OraPrenotazione name="oraPrenotazione"><br><br>
+  
+    <input type="button" (click)="submitForm(Nome,Cognome,Indirizzo,Telefono,Email,DataPrenotazione,OraPrenotazione)" value="Invia">
+</form> 
+<div *ngFor="let art of list">
+    <button (click)="visual(art)">
+        <p>{{art.DataPrenotazione}} - {{art.OraPrenotazione}} -- {{art.Nome}} {{art.Cognome}}</p> 
+    </button><br>
+ </div>
+ <div *ngIf="vis">
+    <app-secret [mostra]="out"></app-secret>
+ </div>
