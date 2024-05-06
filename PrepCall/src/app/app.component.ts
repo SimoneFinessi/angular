@@ -27,7 +27,10 @@ export class AppComponent {
   submitForm(Nome:HTMLInputElement,Congome:HTMLInputElement,Indirizzo:HTMLInputElement,Telefono:HTMLInputElement,Email:HTMLInputElement,DataPrenotazione:HTMLInputElement,OraPrenotazione:HTMLInputElement):void{
 
     this.obsP = this.http.post<Foo>('https://jsonplaceholder.typicode.com/posts', JSON.stringify({ Nome:Nome.value, Cognome:Congome.value,Indirizzo:Indirizzo.value,Telefono:Telefono.value, Email:Email.value, DataPrenotazione:DataPrenotazione.value, OraPrenotazione:OraPrenotazione.value}))
-    this.obsP.subscribe(getdatapost=>{this.dataP=getdatapost})
-    this.list.push(new Foo(Nome.value, Congome.value,Indirizzo.value,Telefono.value, Email.value, DataPrenotazione.value, OraPrenotazione.value))
+    this.obsP.subscribe(getdatapost=>{this.dataP=getdatapost
+      if (this.dataP != undefined){
+        this.list.push(new Foo(Nome.value, Congome.value,Indirizzo.value,Telefono.value, Email.value, DataPrenotazione.value, OraPrenotazione.value))
+      }
+    })
   }
 }
