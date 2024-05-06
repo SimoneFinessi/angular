@@ -1,3 +1,5 @@
 tasks:
   - command: npm i -g @angular/cli@16
+  - command: cd PrepCall
+  - command: npm i 
   
