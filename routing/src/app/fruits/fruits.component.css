@@ -1,0 +1,26 @@
+.animal-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+  
+.animal-card {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+border: 1px solid #ddd;
+border-radius: 4px;
+padding: 10px;
+width: 60px;
+text-align: center;
+}
+
+.animal-emoji {
+font-size: 24px;
+}
+
+.animal-name {
+margin-top: 5px;
+font-size: 14px;
+}
